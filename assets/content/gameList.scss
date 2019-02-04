@@ -1,0 +1,105 @@
+#tablist {
+  .el-tabs__item {
+    color: #4f94bc !important;
+    text-align: center;
+    padding: 0 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    line-height: 26px;
+  }
+  .el-tabs__nav-wrap::after {
+    background-color: #214b6b;
+    height: 5px;
+  }
+  .el-tabs__item.is-active {
+    background-color: #214b6b;
+    color: #fff !important;
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.game-item-text {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.game-item-text .title {
+  color: #c7d5e0;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  white-space: nowrap;
+}
+
+.game-tag {
+  color: #384959;
+  font-size: 12px;
+}
+
+.platform-img {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  opacity: 0.3;
+  vertical-align: bottom;
+}
+
+.game-content {
+  background-color: #202d39;
+  margin-left: -20px;
+  height: 69px;
+}
+
+.game-price {
+  color: #9099a1;
+  float: right;
+  vertical-align: middle;
+}
+
+.game-orignal-price {
+  text-decoration: line-through;
+  color: #626366;
+  font-size: 11px;
+  text-align: right;
+}
+
+.win {
+  background-image: url("../../assets/icon_platform_win.png");
+}
+
+.mac {
+  background-image: url("../../assets/icon_platform_mac.png");
+}
+
+.linux {
+  background-image: url("../../assets/icon_platform_linux.png");
+}
+
+.discount_block {
+  float: right;
+  display: block;
+  margin-right: 16px;
+  margin-top: 23px;
+  width: 120px;
+  text-align: right;
+}
+
+.discount_pct {
+  display: block;
+  float: left;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 4px;
+  margin-top: 8px;
+  border-radius: 1px;
+  color: #a4d007;
+  background: #4c6b22;
+}
+
+.price-block {
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: right;
+}
+

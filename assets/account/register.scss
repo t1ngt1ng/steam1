@@ -1,0 +1,106 @@
+.container {
+  width: 940px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.register-title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #d6d7d8;
+  font-size: 30px;
+}
+
+.register-content {
+  background: rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c6d4df;
+  font-size: 12px;
+}
+
+.register-left {
+  width: 616px;
+  padding: 20px 16px;
+  .el-form-item {
+    margin: 0;
+    .el-form-item__label {
+      font-size: 12px;
+      color: #c6d4df !important;
+      font-weight: bold;
+      height: 23px;
+    }
+    .el-input__inner {
+      width: 222px;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      border: 1px solid #000;
+      border-radius: 3px;
+      box-shadow: 1px 1px 0px #45556c;
+      padding: 5px;
+      margin: 2px 0;
+      height: 25px;
+    }
+  }
+  .el-scrollbar {
+    background: rgba(255, 255, 255, 1);
+  }
+  .login-msg {
+    margin: 18px 0;
+    .el-checkbox__inner {
+      width: 13px;
+      height: 13px;
+      border-radius: 3px;
+    }
+    .el-checkbox__label {
+      margin-left: -6px;
+      color: #c6d4df !important;
+      font-size: 12px;
+    }
+  }
+}
+
+.ssa_box{
+  border:1px solid #364c59;
+  overflow:auto;
+  padding:9px;
+  height:337px;
+  line-height:15px;
+
+  h3{
+    color: #ffffff;
+    font-size:22px;
+  }
+  p{
+    margin: 9px 0;
+  }
+  a{
+    color: #fff;
+  }
+}
+
+.input-msg {
+  margin-top: 28px;
+  p {
+    margin-left: 10px;
+    padding: 0;
+  }
+}
+
+.btn-login {
+  background: rgba(103, 193, 245, 0.2);
+  color: #67c1f5 !important;
+  border-radius: 2px;
+  border: none;
+  line-height: 30px;
+  padding: 0 15px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.btn-login:hover {
+
+  background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+  color: #fff !important;
+
+}

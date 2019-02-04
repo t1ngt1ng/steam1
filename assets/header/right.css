@@ -1,0 +1,56 @@
+.right-nav {
+  font-size: 11px;
+  color: #b8b6b4;
+  margin-top: 6px;
+  font-weight: 900;
+}
+
+.btn-green {
+  background: #5c7e10;
+  margin-right: 5px;
+}
+
+.install {
+  line-height: 24px;
+  color: #fff !important;
+  display: inline-block;
+  background-image: url('../btn_header_installsteam_download.png');
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  font-weight: 800;
+}
+
+.right {
+  position: relative;
+}
+
+.right li {
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
+.right dl {
+  color: #fff;
+  z-index: 200;
+  box-shadow: 0 0 12px #000000;
+  border: 1px solid #171a21;
+  position: absolute;
+  top: 30px;
+  left: -40px;
+  width: 305px;
+}
+.right dl dd{
+  padding: 5px 5px 10px 15px;
+
+}
+
+.top {
+  padding-top: 3px !important;
+}
+
+
+
+
+
+

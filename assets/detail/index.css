@@ -1,0 +1,162 @@
+.single-con {
+  width: 940px;
+  margin: 0 auto;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
+  padding-bottom: 40px;
+}
+
+.single-con ul li {
+
+  list-style-type: none;
+  float: left;
+  margin-top: 2px;
+  /*margin: 2px;*/
+}
+
+.big-img {
+  width: 600px;
+  height: 337px;
+}
+
+.img-block {
+  width: 115px;
+  height: 65px;
+}
+
+.single-con ul li + li {
+  margin-left: 6px;
+}
+
+.game_title_img {
+  width: 324px;
+  height: 151px;
+  margin-bottom: 7px;
+}
+
+.game_description_snippet {
+  display: block;
+  color: #c6d4df;
+  max-height: 111px;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 18px;
+  padding-right: 16px;
+}
+
+.app_tag {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #67c1f5;
+  background-color: rgba(103, 193, 245, 0.2);
+  box-shadow: none;
+  margin-right: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 3px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app_tag:hover {
+  background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+}
+
+.game-info-title {
+  font-size: 10px;
+  padding-right: 10px;
+  min-width: 94px;
+  color: #556772;
+}
+
+.game-info-content {
+  color: #66C0F4;
+}
+
+.single-con .platform-img {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  /*opacity: 0.3;*/
+  vertical-align: bottom;
+}
+
+.win {
+  background-image: url("../../assets/icon_platform_win.png");
+}
+
+.mac {
+  background-image: url("../../assets/icon_platform_mac.png");
+}
+
+.linux {
+  background-image: url("../../assets/icon_platform_linux.png");
+}
+
+.game_purchase {
+  position: relative;
+  background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%);
+  padding: 16px;
+}
+
+.game_purchase_price {
+  display: block;
+  position: absolute;
+  right: 16px;
+  bottom: -17px;
+}
+.game_purchase_bg{
+  height: 32px;
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: #000000;
+  padding: 2px 2px 2px 0px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  white-space: nowrap;
+  font-size: 0;
+}
+.game_price{
+  color: #fff;
+  font-weight: bold;
+  background-color: #000000;
+  font-size: 13px;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 24px;
+}
+.btn_addtocart{
+  display: inline-block;
+}
+.btn_addtocart a{
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #D2E885 !important;
+  background: linear-gradient( to bottom, rgba(121,153,5,1) 5%, rgba(83,105,4,1) 95%);
+}
+
+.btn_addtocart a span{
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 30px;
+  border-radius: 2px;
+  display: block;
+  background: transparent;
+  text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );
+}
+
+.responsive_apppage_details_right{
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 18px;
+}
