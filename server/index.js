@@ -11,6 +11,7 @@ import Redis from 'koa-redis';
 
 import users from './router/users';
 import games from './router/games';
+import cart from './router/cart';
 
 const consola = require('consola')
 const {Nuxt, Builder} = require('nuxt')
@@ -55,6 +56,7 @@ async function start() {
 
   app.use(users.routes()).use(users.allowedMethods())
   app.use(games.routes()).use(games.allowedMethods())
+  app.use(cart.routes()).use(cart.allowedMethods())
 
 
   app.use(ctx => {

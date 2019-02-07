@@ -35,7 +35,7 @@
 
     <el-row style="margin-top: 30px">
       <el-col
-        span="15"
+        :span="15"
         class="game_purchase">
         <h1 style="display: inline-block;color:#fff">购买{{ detail.title }}</h1>
         <div style="float: right">
@@ -48,7 +48,9 @@
         <div class="game_purchase_price">
           <div class="game_purchase_bg">
             <span class="game_price">¥ {{ detail.price }}</span>
-            <div class="btn_addtocart"><a href=""><span>添加至购物车</span></a></div>
+            <div class="btn_addtocart"><a
+              href="#"
+              @click="createCart"><span>添加至购物车</span></a></div>
           </div>
         </div>
 
@@ -81,6 +83,20 @@
         }
       })
       return {detail: data};
+    },
+    methods: {
+      async createCart(e) {
+        e.preventDefault();
+
+        let {status, data: {code, id}} = await this.$axios.post('/cart/create', {
+          params: {
+            id: this.detail._id,
+            detail:{
+              name:this.detail
+            }
+      }
+      })
+      }
     }
   }
 

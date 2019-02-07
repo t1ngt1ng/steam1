@@ -6,7 +6,8 @@
 
 import mongoose from 'mongoose';
 import User from '../models/users';
-import Game from '../models/games'
+import Game from '../models/games';
+import Cart from '../models/carts'
 
 
 export default function () {
@@ -21,6 +22,7 @@ export default function () {
   });
   User;
   Game;
+  Cart;
 
   return db;
 }
