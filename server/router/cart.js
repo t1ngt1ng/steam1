@@ -6,11 +6,8 @@
 
 import Router from 'koa-router';
 import Redis from 'koa-redis';
-import Passport from '../config/passport' ;
 import axios from '../config/axios';
-
-import util from '../util.js';
-import config from '../config/config';
+import md5 from 'crypto-js/md5';
 
 import cartDAO from '../DAO/cartUtil'
 
@@ -20,7 +17,7 @@ let router = new Router({
 
 let Store = new Redis().client;
 
-router.get('/create', async (ctx, next) => {
+router.post('/create', async (ctx, next) => {
   if (!ctx.isAuthenticated()) {
     ctx.body = {
       code: -1,
@@ -29,8 +26,13 @@ router.get('/create', async (ctx, next) => {
   } else {
     let time = Date();
     let cartNo = md5(Math.random() * 1000 + time).toString();
-    let {params: {id, detail}} = ctx.request.body;
-    let res = await cartDAO.createCart(id, cartNo, time, detail)
+    console.log(cartNo)
+    let {params: {id, info}} = ctx.request.body;
+    console.log(info)
+    let details = []
+    details.push(info)
+    let res = await cartDAO.createCart(id, cartNo, time, details, ctx.session.passport.user)
+
     if (res) {
       ctx.body = {
         code: 0,
@@ -46,5 +48,24 @@ router.get('/create', async (ctx, next) => {
   }
 })
 
+
+router.post('/getCart', async (ctx, next) => {
+  console.log(4444444)
+  let {id} = ctx.request.body;
+  try {
+    let res = await cartDAO.getCart(id);
+    ctx.body = {
+      code: 0,
+      data: res ? res.detail[0] : {}
+    }
+  }
+  catch (e) {
+    console.log(e)
+    ctx.body = {
+      code: -1,
+      data: {}
+    }
+  }
+})
 
 export default router;

@@ -91,11 +91,18 @@
         let {status, data: {code, id}} = await this.$axios.post('/cart/create', {
           params: {
             id: this.detail._id,
-            detail:{
-              name:this.detail
-            }
-      }
-      })
+            info: this.detail
+          }
+        })
+
+        if (status === 200 && code === 0) {
+          location.href = `/cart/?id=${id}`
+        } else {
+//          if (code === -1) {
+//            location.href = '/login';
+//          }
+          console.log('error');
+        }
       }
     }
   }

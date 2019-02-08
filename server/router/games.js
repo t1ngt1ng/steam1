@@ -6,11 +6,6 @@
 
 import Router from 'koa-router';
 import Redis from 'koa-redis';
-import Passport from '../config/passport' ;
-import axios from '../config/axios';
-
-import util from '../util.js';
-import config from '../config/config';
 
 import gameDAO from '../DAO/gameUtil'
 

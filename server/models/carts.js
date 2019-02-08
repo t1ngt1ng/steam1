@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const CartSchema = new Schema({
-  id: {
+  pid: {
     type: String,
     require: true
   },

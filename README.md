@@ -1,22 +1,20 @@
 # steam
 
-> My awe-inspiring Nuxt.js project
+项目使用nuxt+koa2+mongoose+axios+passport+redis+sass
+仿照steam页面，  
+只实现部分功能:  
 
-## Build Setup
+- 游戏列表
+- 登录注册
+- 游戏详情
+- 添加到购物车
 
-``` bash
-# install dependencies
-$ yarn install
+效果图：
+![index1](./pic/index1.png)
+![index2](./pic/index2.png)
+![detail](./pic/detail.png)
+![cart](./pic/cart.png)
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+图片均来自steam，均不上传，有部分直接使用的网络图片链接
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
 
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

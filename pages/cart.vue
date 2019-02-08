@@ -70,42 +70,42 @@
     components: {
       vBar
     },
-    props: {
-      info: {
-        type: Object,
-        default() {
-          return {
-            "title": "Overcooked!2",
-            "imgUrl": "https://media.st.dl.bscstorage.net/steam/apps/728880/capsule_184x69_alt_assets_2.jpg?t=1547726640",
-            "platform": [
-              "win",
-              "mac",
-              "steam"
-            ],
-            "tags": [
-              "多人",
-              "在线合作",
-              "独立",
-              "休闲"
-            ],
-            "slidePic": {
-              "titlePic": "https://media.st.dl.bscstorage.net/steam/apps/728880/header_schinese.jpg?t=1547726640",
-              "bigImg": "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_d11e36791d7c5bf5dc980bc189b3f50b53657b51.600x338.jpg?t=1547726640",
-              "pics": [
-                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_4ad737de5e5439217ce0f0d9bd381fe0e251b87a.116x65.jpg?t=1547726640",
-                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_d11e36791d7c5bf5dc980bc189b3f50b53657b51.116x65.jpg?t=1547726640",
-                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_a78767be5e9f3fb714721f0ab16c173cf9d78f2f.116x65.jpg?t=1547726640",
-                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_bec2afe4b53d2dbb08119be5a7fbf1b0df3d705f.116x65.jpg?t=1547726640",
-                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_088a00e30b0671f4f3a0406651983ad9d05512d7.116x65.jpg?t=1547726640"
-              ]
-            },
-            "price": 90,
-            "createTime": "2019年1月1日",
-            "reviewCount": 2
-          }
-        }
-      }
-    },
+//    props: {
+//      info: {
+//        type: Object,
+//        default() {
+//          return {
+//            "title": "Overcooked!2",
+//            "imgUrl": "https://media.st.dl.bscstorage.net/steam/apps/728880/capsule_184x69_alt_assets_2.jpg?t=1547726640",
+//            "platform": [
+//              "win",
+//              "mac",
+//              "steam"
+//            ],
+//            "tags": [
+//              "多人",
+//              "在线合作",
+//              "独立",
+//              "休闲"
+//            ],
+//            "slidePic": {
+//              "titlePic": "https://media.st.dl.bscstorage.net/steam/apps/728880/header_schinese.jpg?t=1547726640",
+//              "bigImg": "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_d11e36791d7c5bf5dc980bc189b3f50b53657b51.600x338.jpg?t=1547726640",
+//              "pics": [
+//                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_4ad737de5e5439217ce0f0d9bd381fe0e251b87a.116x65.jpg?t=1547726640",
+//                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_d11e36791d7c5bf5dc980bc189b3f50b53657b51.116x65.jpg?t=1547726640",
+//                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_a78767be5e9f3fb714721f0ab16c173cf9d78f2f.116x65.jpg?t=1547726640",
+//                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_bec2afe4b53d2dbb08119be5a7fbf1b0df3d705f.116x65.jpg?t=1547726640",
+//                "https://media.st.dl.bscstorage.net/steam/apps/728880/ss_088a00e30b0671f4f3a0406651983ad9d05512d7.116x65.jpg?t=1547726640"
+//              ]
+//            },
+//            "price": 90,
+//            "createTime": "2019年1月1日",
+//            "reviewCount": 2
+//          }
+//        }
+//      }
+//    },
     data() {
       return {}
     },
@@ -116,7 +116,17 @@
           if (!discount) return price;
           console.log(price, discount, Math.round(price - (price * discount / 100)))
           return Math.round(price - (price * discount / 100));
-
+        }
+      }
+    },
+    async asyncData(ctx) {
+      let {status, data: {code, data}} = await ctx.$axios.post('/cart/getCart', {
+        id: ctx.query.id
+      });
+      if (status === 200 && code === 0) {
+        return {
+          info: data,
+          cartNo: ctx.query.id
         }
       }
     }
